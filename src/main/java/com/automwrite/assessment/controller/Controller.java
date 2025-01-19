@@ -1,10 +1,10 @@
 package com.automwrite.assessment.controller;
 
 import com.automwrite.assessment.service.JsonParserService;
-import com.automwrite.assessment.util.DocSaveUtil;
 import com.automwrite.assessment.model.client.ClientData;
 import com.automwrite.assessment.model.organization.OrganizationData;
 import com.automwrite.assessment.service.LlmService;
+import com.automwrite.assessment.service.util.DocumentService;
 import lombok.AllArgsConstructor;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-import static com.automwrite.assessment.util.DocSaveUtil.parseTxtFile;
+import static com.automwrite.assessment.service.util.FileParserService.parseTxtFile;
 
 @RestController
 @RequestMapping("/api")
@@ -25,7 +25,7 @@ public class Controller {
 
     private final LlmService llmService;
     private final JsonParserService jsonParserService;
-    private final DocSaveUtil docSaveUtil;
+    private final DocumentService documentService;
 
     /**
      * Processes the uploaded .txt file to extract user intent, utilises JSON data and an LLM service
@@ -48,13 +48,13 @@ public class Controller {
         //String processedContent = llmService.processIntent(userIntent, client, org);
 
         // Load the template document
-        XWPFDocument templateDocument = docSaveUtil.loadTemplate();
+        XWPFDocument templateDocument = documentService.loadTemplate();
 
         // TODO: Insert the processed content into the relevant section in the template
-        //docSaveUtil.insertContentIntoTemplate(templateDocument, processedContent);
+        //RELEVANTCLASSHERE.insertContentIntoTemplate(templateDocument, processedContent);
 
         // Save the modified document to a new .docx file
-        docSaveUtil.saveDocument(templateDocument);
+        documentService.saveDocument(templateDocument);
 
         // Return a response indicating successful processing
         return ResponseEntity.ok("User request processed, recommendation created.");
