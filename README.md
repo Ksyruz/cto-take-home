@@ -25,6 +25,8 @@ REST API that processes user intent from a `.txt` file, integrates it with data 
 5. Insert the processed text into the relevant section of the provided `.docx` template.
 6. Save the output as a new `.docx` file.
 
+Feel free to use your own equivalent JSONS or intent .txt files if of equivalent complexity should you find this preferable. 
+
 ## API Endpoint
 
 POST /api/user-request Body: multipart/form-data
