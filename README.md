@@ -11,7 +11,7 @@ REST API that processes user intent from a `.txt` file, integrates it with data 
 - Spring Boot
 - Claude API key (optional for LLM-based processing)
 
-## Input Files
+## Input Files (found in the resources folder)
 - `userintent.txt`: Contains the user's intent to be processed.
 - `client.json`: Represents information about a client.
 - `organisation.json`: Represents information about the organisation and possible outcomes.
