@@ -42,7 +42,7 @@ template (file): The .docx template file.
 
 - **Input 2**:
   - `userintent.txt`: "I would like to consolidate my pensions into one provider."
-  - Output: A `.docx` letter detailing a consolidation of pensions.
+  - Output: a `.docx` letter detailing a consolidation of pensions.
 
 ## Contact
 If you have any questions, please email:
