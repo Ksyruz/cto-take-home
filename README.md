@@ -38,7 +38,7 @@ template (file): The .docx template file.
 ## Examples
 - **Input 1**:
   - `userintent.txt`: "I want to transfer my pension from Aviva to Fidelity."
-  - Output: A `.docx` letter recommending a pension transfer from Aviva to Fidelity. It must contain details from the both the Aviva and Fidelity plans.
+  - Output: a `.docx` letter recommending a pension transfer from Aviva to Fidelity. It must contain details from the both the Aviva and Fidelity plans.
 
 - **Input 2**:
   - `userintent.txt`: "I would like to consolidate my pensions into one provider."
