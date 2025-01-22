@@ -44,13 +44,13 @@ public class Controller {
         ClientData client = jsonParserService.loadClientData();
         OrganizationData org = jsonParserService.loadOrganizationData();
 
-        // TODO: Process the user intent using JSON data and the LLM service
+        // Process the user intent using JSON data and the LLM service
         //String processedContent = llmService.processIntent(userIntent, client, org);
 
         // Load the template document
         XWPFDocument templateDocument = documentService.loadTemplate();
 
-        // TODO: Insert the processed content into the relevant section in the template
+        // Insert the processed content into the relevant section in the template
         //RELEVANTCLASSHERE.insertContentIntoTemplate(templateDocument, processedContent);
 
         // Save the modified document to a new .docx file
